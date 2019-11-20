@@ -12,7 +12,9 @@ public class RPGame {
         medic.setHeal_points(5);
         Magic magic = new Magic(100, 10);
         Hunter hunter = new Hunter(100, 10);
-        Hero[] heroes = {warrior, medic, hunter, magic};
+        Thor thor = new Thor(100, 10);
+        Tank tank = new Tank(150, 5);
+        Hero[] heroes = {warrior, medic, hunter, magic, thor, tank};
 
         printStatistics(heroes, boss);
         while (!isFinished(heroes, boss)) {
@@ -47,7 +49,7 @@ public class RPGame {
 
     private static void bossHit(Hero[] heroes, Boss boss) {
         for (int i = 0; i < heroes.length; i++) {
-            heroes[i].setHealth(heroes[i].getHealth() - boss.getDamage());
+            heroes[i].setHealth(heroes[i].getHealth() - boss.getDamage()/2);
 
         }
     }

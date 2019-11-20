@@ -5,5 +5,7 @@ public enum AbilityType {
     CRITICAL_DAMAGE,
     HEAL,
     BOOST,
-    MISS_DAMAGE
+    MISS_DAMAGE,
+    STUN_BOSS,
+    TAKE_PART_OF_BOSS_DAMAGE
 }
